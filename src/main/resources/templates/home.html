@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/base.css}">
+<link rel="stylesheet" type="text/css" th:href="@{/home.css}">
+</head>
+<body>
+<div th:replace="~{base::header}"></div>
+<div id="container1">
+	<div id="box">
+		<a id="add" href="AddData">Add</a>
+		<div id="tb">
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Email</th>
+						<th>College</th>
+						<th>Operation</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="k:${stud}"> 
+						<td th:text="${k.username}"></td>
+						<td th:text="${k.email}"></td>
+						<td th:text="${k.college}"></td>
+						<td><a class="e fb" th:href="@{/edit(id=${k.id})}">Edit</a> <a class="d fb" th:href="@{/delete(id=${k.id})}">Delete</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+@charset "ISO-8859-1";
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+#container{
+ 	background: #ff0080;
+ 	height: 60px;
+ }
+ 
+ #container h1{
+ 	color: white;
+ 	padding-left: 20px;
+ 	padding-top: 15px;
+ }
